@@ -1,0 +1,28 @@
+server:
+  port: 8088
+spring:
+  jpa:
+#  打印ddl语句
+    generate-ddl: true
+    #
+    show-sql: true
+    #  hibernate打印ddl语句
+    hibernate:
+      ddl-auto: create
+
+
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+    username: zhangjc
+    password: zhangjc
+    initialize: true
+# 日志级别配置
+logging:
+  level:
+    root: info
+#    显示sql语句
+    org.hibernate: info
+    org.hibernate.type.description.sql.BasicBinder: trace
+    org.hibernate.type.description.sql.BaseExtractor: trace
+    com.zhang: debug
