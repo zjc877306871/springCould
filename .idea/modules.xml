@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/discover-eureka/discover-eureka.iml" filepath="$PROJECT_DIR$/discover-eureka/discover-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springconsumer/springconsumer.iml" filepath="$PROJECT_DIR$/springconsumer/springconsumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcould.iml" filepath="$PROJECT_DIR$/springcould.iml" />
       <module fileurl="file://$PROJECT_DIR$/springprovider/springprovider.iml" filepath="$PROJECT_DIR$/springprovider/springprovider.iml" />
     </modules>

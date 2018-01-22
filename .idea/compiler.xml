@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="discover-eureka" />
+        <module name="springconsumer" />
         <module name="springcould" />
         <module name="springprovider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="consumer" target="1.8" />
+      <module name="discover-eureka" target="1.8" />
+      <module name="springconsumer" target="1.8" />
       <module name="springcould" target="1.8" />
       <module name="springprovider" target="1.8" />
     </bytecodeTargetLevel>
