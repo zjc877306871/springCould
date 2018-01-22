@@ -16,7 +16,7 @@ spring:
     url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
     username: zhangjc
     password: zhangjc
-    initialize: true
+#    initialize: true
 # 日志级别配置
 logging:
   level:
