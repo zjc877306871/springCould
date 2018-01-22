@@ -11,6 +11,9 @@
 	<name>springcould</name>
 	<description>Demo project for Spring Boot</description>
 
+	<modules>
+		<module>springprovider</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
