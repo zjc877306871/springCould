@@ -1,12 +1,29 @@
+security:
+  basic:
+      enabled: true
+  user:
+    name: zhangjc
+    password: 123456
+
+#测试,不使用密码
+#management.security.enabled: false
+
 server:
   port: 8761
 eureka:
   client:
     service-url:
-      defaultZone: localhost:8761/eureka
+      defaultZone: http:zhangjc:123456@//localhost:8761/eureka
 
-# 模拟设置只作为服务端
+# 模拟设置只作为服务端,单机版
     fetch-registry: false
     register-with-eureka: false
+
+spring:
+  application:
+    name: discover-eureka
+
+
+
 
 
