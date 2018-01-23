@@ -5,19 +5,21 @@ security:
     name: zhangjc
     password: 123456
 
-#²âÊÔ,²»Ê¹ÓÃÃÜÂë
-#management.security.enabled: false
-
 server:
   port: 8761
 eureka:
+  server:
+   # å…³é—­è‡ªæˆ‘ä¿æŠ¤æ¨¡å¼ï¼ˆç¼ºçœä¸ºæ‰“å¼€ï¼‰
+    enable-self-preservation: false
   client:
     service-url:
-      defaultZone: http:zhangjc:123456@//localhost:8761/eureka
+      defaultZone: http://zhangjc:123456@localhost:8761/eureka
 
-# Ä£ÄâÉèÖÃÖ»×÷Îª·şÎñ¶Ë,µ¥»ú°æ
+# æ˜¯å¦ä»eurekaè·å–æ³¨å†Œä¿¡æ¯
     fetch-registry: false
+    # æ˜¯å¦æ³¨å†Œåˆ°eurekaï¼ˆeurekaæœ¬èº«æ˜¯ä¸éœ€è¦å†æ³¨å†Œåˆ°è‡ªå·±çš„ï¼‰
     register-with-eureka: false
+
 
 spring:
   application:

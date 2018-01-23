@@ -2,9 +2,9 @@ package com.zhang;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-
-@EnableDiscoveryClient
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+//作为服务的注解
+@EnableEurekaServer
 @SpringBootApplication
 public class DiscoverEurekaApplication {
 
