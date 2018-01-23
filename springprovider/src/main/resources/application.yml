@@ -1,6 +1,8 @@
 server:
   port: 8088
 spring:
+  application:
+    name: springprovider
   jpa:
 #  打印ddl语句
     generate-ddl: true
@@ -26,3 +28,17 @@ logging:
     org.hibernate.type.description.sql.BasicBinder: trace
     org.hibernate.type.description.sql.BaseExtractor: trace
     com.zhang: debug
+
+
+#配置eureka客户端
+eureka:
+  client:
+#  心跳检测
+    healthcheck:
+      enable: true
+    service-url:
+      defaultZone: http://zhangjc:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance-id:${server.port}}
+

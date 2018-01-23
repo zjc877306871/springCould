@@ -1,5 +1,19 @@
 server:
   port: 8087
 
+spring:
+  application:
+    name: springconsumer
 
-#  提按假侧视22222222222222222
+
+#配置eureka客户端
+eureka:
+  client:
+#  心跳检测
+    healthcheck:
+      enable: true
+    service-url:
+      defaultZone: http://zhangjc:123456@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance-id:${server.port}}
