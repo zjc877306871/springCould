@@ -17,3 +17,5 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance-id:${server.port}}
+
+#    张建冲测试
