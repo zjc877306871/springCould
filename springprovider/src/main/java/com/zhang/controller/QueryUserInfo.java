@@ -28,6 +28,11 @@ public class QueryUserInfo {
         return user;
     }
 
+    @GetMapping("/getUserSuccesee")
+    public User getUser(User user){
+       return user;
+    }
+
     @GetMapping("/eureka")
     public String serviceUrl() {
         InstanceInfo instance = clientlient.getNextServerFromEureka("springprovider", false);

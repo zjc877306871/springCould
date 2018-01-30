@@ -1,8 +1,8 @@
 server:
-  port: 8088
+  port: 8090
 spring:
   application:
-    name: springprovider
+    name: springprovider1
   jpa:
 #  打印ddl语句
     generate-ddl: true
