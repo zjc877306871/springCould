@@ -15,6 +15,7 @@
 		<module>springprovider</module>
 		<module>springconsumer</module>
 		<module>discover-eureka</module>
+		<module>springconsumer-ribbon</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
