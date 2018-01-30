@@ -19,25 +19,18 @@ public class HelloController {
     @Autowired
     private RestTemplate restTemplate;
 
+//  ribbon  api调用入口
     @Autowired
     private LoadBalancerClient LoadBalancerClient;
 
     @GetMapping("/user/{id}")
     public User queryUserInfo(@PathVariable String id){
-        User user = restTemplate.getForObject("http://springprovider/user/"+id,User.class);
+        ServiceInstance serviceInstance = LoadBalancerClient.choose("springprovider1");
+        System.out.println("111"+serviceInstance.getHost()+":"+serviceInstance.getPort()+":"+serviceInstance.getServiceId());
+        User user = restTemplate.getForObject("http://springprovider1/user/"+id,User.class);
         return user;
     }
 
-    @GetMapping("/test")
-    public String testRibbon(){
 
-        ServiceInstance serviceInstance = LoadBalancerClient.choose("springprovider1");
-        System.out.println("111"+serviceInstance.getHost()+":"+serviceInstance.getPort()+":"+serviceInstance.getServiceId());
-
-        ServiceInstance serviceInstance2 = LoadBalancerClient.choose("springprovider2");
-        System.out.println("222"+serviceInstance2.getHost()+":"+serviceInstance2.getPort()+":"+serviceInstance2.getServiceId());
-
-        return "1";
-    }
 
 }

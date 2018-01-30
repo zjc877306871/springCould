@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: springconsumer
+    name: springconsumer-ribbon
 
 
 #配置eureka客户端
@@ -17,3 +17,13 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance-id:${server.port}}
+#禁用eureka里面的ribbon
+ribbon:
+  eureka:
+   enabled: false
+
+springprovider1:
+  ribbon:
+    #禁用eureka里面的ribbon,配置ribbon的请求地址
+    listOfServers: localhost:8091
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
