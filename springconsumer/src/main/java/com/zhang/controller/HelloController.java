@@ -31,7 +31,7 @@ public class HelloController {
     @GetMapping("/test")
     public String testRibbon(){
 
-        ServiceInstance serviceInstance = LoadBalancerClient.choose("springprovider");
+        ServiceInstance serviceInstance = LoadBalancerClient.choose("springprovider1");
         System.out.println("111"+serviceInstance.getHost()+":"+serviceInstance.getPort()+":"+serviceInstance.getServiceId());
 
         ServiceInstance serviceInstance2 = LoadBalancerClient.choose("springprovider2");
