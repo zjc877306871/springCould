@@ -2,13 +2,16 @@ package com.zhang.feign;
 
 import com.zhang.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * feign暴露接口
  * Created by YJ on 2018/1/30.
  */
-@FeignClient("springprovider1")
+@FeignClient(name = "springprovider1")
 public interface UserFeignClient {
 
     //只能用requestMapping ,不能用getMapping,,使用PathVariable的时候必须添加@PathVariable("id")
