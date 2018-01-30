@@ -1,5 +1,5 @@
 server:
-  port: 8087
+  port: 8088
 
 spring:
   application:
@@ -17,6 +17,3 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance-id:${server.port}}
-
-#    张建冲测试
-#啥都没说肯定是倒计时三生三世 大幅度

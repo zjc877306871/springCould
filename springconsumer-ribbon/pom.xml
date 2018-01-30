@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>springconsumer</artifactId>
+	<artifactId>springconsumer-ribbon</artifactId>
 	<packaging>jar</packaging>
 
 	<properties>
